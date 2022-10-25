@@ -19,7 +19,7 @@ const routes: Routes = [
     component: SignUpComponent
   },
   {
-    path: 'home',
+    path: 'star-wars',
     component: StarWarsPageComponent
   }
 ];

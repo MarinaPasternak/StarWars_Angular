@@ -102,6 +102,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "angular-star-wars:build:production",
+            "firebaseProject": "starwarsangular-69d60",
+            "firebaseHostingSite": "starwarsangular-69d60"
+          }
         }
       }
     }

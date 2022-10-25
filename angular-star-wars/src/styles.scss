@@ -17,6 +17,9 @@ body {
 
     h1 {
         text-align: center;
+        font-size: 1.5em;
+        font-weight: 900;
+        color: #c2185b;
     }
   
     mat-form-field {
@@ -26,7 +29,7 @@ body {
     }
 
     .mat-form-field-label {
-        color: #c2185b !important;
+        color: black !important;
     }
 
     .mat-form-field-underline {

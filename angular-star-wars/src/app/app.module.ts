@@ -14,6 +14,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { LoginComponent } from './components/login/login.component';
 import { StarWarsPageComponent } from './components/star-wars-page/star-wars-page.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { HotToastModule } from '@ngneat/hot-toast';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,10 @@ import { StarWarsPageComponent } from './components/star-wars-page/star-wars-pag
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    HotToastModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

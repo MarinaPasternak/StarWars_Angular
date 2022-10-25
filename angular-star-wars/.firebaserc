@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "starwarsangular-69d60": {
+      "hosting": {
+        "angular-star-wars": [
+          "starwarsangular-69d60"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "starwarsangular-69d60"
+  }
+}
