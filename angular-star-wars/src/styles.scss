@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 18pt;
+}
 
 .form-container {
     display: block;
@@ -15,14 +19,27 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         text-align: center;
     }
   
-    input {
+    mat-form-field {
         height: 2em;
         width: 100%;
+        margin-bottom: 3em;
+    }
+
+    .mat-form-field-label {
+        color: #c2185b !important;
+    }
+
+    .mat-form-field-underline {
+        background-color: #c2185b !important;
+      } 
+
+    .form-button {
         margin-bottom: 2em;
     }
 
-    .form-button {
-        margin-bottom: 1em;
+    .button-container {
+        display: flex;
+        flex-direction: column;
     }
   }
   

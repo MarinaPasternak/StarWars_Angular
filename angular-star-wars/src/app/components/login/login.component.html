@@ -1,16 +1,18 @@
 <div class="form-container mat-elevation-z5">
     <h1>Login</h1>
     <form [formGroup]="loginForm">
-        <mat-form-field>
-            <input matInput placeholder="Email address" formControlName="email" />
+        <mat-form-field color="primary">
+            <input matInput placeholder="Email address" formControlName="email"/>
         </mat-form-field>
         <mat-form-field>
-            <input matInput type="password" placeholder="Password" formControlName="password" />
+            <input matInput type="password" placeholder="Password" formControlName="password"/>
         </mat-form-field>
-        <button class="form-button" type="submit" mat-raised-button color="primary">Login</button>
-        <span>
-            Haven`t register here? 
-            <a class="sign-up-link" routerLink="/sign-up">Sign up!</a>
-        </span>
+        <div class="button-container">
+            <button class="form-button" type="submit" mat-raised-button color="primary">Login</button>
+            <span>
+                Haven`t register here? 
+                <a class="sign-up-link" routerLink="/sign-up">Sign up!</a>
+            </span>
+        </div>
     </form>
   </div>
