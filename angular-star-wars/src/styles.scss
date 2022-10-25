@@ -40,6 +40,10 @@ body {
     .button-container {
         display: flex;
         flex-direction: column;
+
+        span {
+            text-align: center;
+        }
     }
   }
   
