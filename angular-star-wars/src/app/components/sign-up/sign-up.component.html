@@ -1,6 +1,6 @@
 <div class="form-container mat-elevation-z5">
     <h1>Sign Up</h1>
-    <form [formGroup]="signUpForm">
+    <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
         <mat-form-field>
             <input matInput placeholder="Email address" formControlName="email"/>
             <mat-error *ngIf="email?.errors?.['required']">
@@ -19,6 +19,9 @@
             />
             <mat-error *ngIf="password?.errors?.['required']">
                 Password is required
+            </mat-error>
+            <mat-error *ngIf="password?.errors?.['minlength']">
+                Please enter a valid password address - more than 6 simbols
             </mat-error>
         </mat-form-field>
         <mat-form-field>

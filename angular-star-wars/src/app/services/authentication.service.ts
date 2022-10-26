@@ -3,12 +3,10 @@ import {
   Auth,
   signInWithEmailAndPassword,
   authState,
-  // createUserWithEmailAndPassword,
-  // updateProfile,
-  // UserInfo,
-  // UserCredential,
+  createUserWithEmailAndPassword,
+  UserCredential
 } from '@angular/fire/auth';
-import { concatMap, from, Observable, of, switchMap } from 'rxjs';
+import { from, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -24,5 +22,9 @@ export class AuthenticationService {
 
   logout(): Observable<any> {
     return from(this.auth.signOut());
+  }
+
+  signUp(email: string, password: string): Observable<UserCredential> {
+    return from(createUserWithEmailAndPassword(this.auth, email, password));
   }
 }
