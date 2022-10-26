@@ -3,12 +3,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { StarWarsPageComponent } from './components/star-wars-page/star-wars-page.component';
+import {
+  canActivate,
+  redirectUnauthorizedTo,
+} from '@angular/fire/auth-guard';
+
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: SignUpComponent,
+    component: SignUpComponent
   },
   {
     path: 'login',
@@ -20,7 +26,8 @@ const routes: Routes = [
   },
   {
     path: 'star-wars',
-    component: StarWarsPageComponent
+    component: StarWarsPageComponent,
+    ...canActivate(redirectUnauthorizedToLogin)
   }
 ];
 
